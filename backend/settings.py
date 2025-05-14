@@ -23,8 +23,11 @@ import os
 
 SECRET_KEY = os.getenv('DJANGO_SECRET_KEY', 'fallback-secret-key')
 
-ALLOWED_HOSTS = os.getenv('DJANGO_ALLOWED_HOSTS', '*').split(',')
-
+ALLOWED_HOSTS = [
+    "my-portfolio-hafidz-backend.up.railway.app",
+    "localhost",
+    "127.0.0.1"
+]
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
