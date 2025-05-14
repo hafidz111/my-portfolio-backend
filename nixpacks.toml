@@ -9,7 +9,7 @@ commands = [
   "python3.13 -m venv /opt/venv",
   ". /opt/venv/bin/activate",
   "pip install --upgrade pip",
-  "pip install -r ../requirements.txt"  # karena file ada di luar workDir
+  "pip install -r requirements.txt" 
 ]
 
 [phases.build]
