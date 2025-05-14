@@ -1,0 +1,22 @@
+[project]
+# point Nixpacks at the Django project
+workDir = "backend"
+
+[phases.install]
+# install Python dependencies
+commands = [
+  "pip install -r requirements.txt"
+]
+
+[phases.build]
+# run your Django migrations and collectstatic
+commands = [
+  "python manage.py migrate",
+  "python manage.py collectstatic --noinput"
+]
+
+# instruct Nixpacks how to run your app
+[[services]]
+  type = "django"
+  path = "portfolio_backend.wsgi:application"
+  port = 8000
