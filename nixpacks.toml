@@ -18,5 +18,5 @@ commands = [
 # instruct Nixpacks how to run your app
 [[services]]
   type = "django"
-  path = "portfolio_backend.wsgi:application"
+  path = "backend.wsgi:application"
   port = 8000
